@@ -39,7 +39,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
 	% MNIST
 	% Diacritization
 	% TIMIT (Not supported yet)
-	CONFIG_strParams.sDataset = 'ATB_Senti';
+	CONFIG_strParams.sDataset = '';
 	
 	% The path of the dataset files
 	CONFIG_strParams.sDatasetFilesPath = 'C:\Non_valeo\Research\PostDoc\Sentiment Analysis\Code\Datasets\ATB\';
@@ -62,7 +62,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.sNameofErrWorkspace = [CONFIG_strParams.sConfigEnvPath '\err_performance.mat'];
     
     % Name of the input data structures workspace
-    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data.mat'];
+    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data_auto_encoder_codes.mat'];
     
     % Name of the input data structures workspace
     CONFIG_strParams.sNetDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\final_net.mat'];
@@ -135,7 +135,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nNumTrainedUpperLayers = 1; % It means update w_class and NW_weights{CONFIG_strParams.nInitialNumLayers} (last layer), so number is the execluding the top layer
     
     % Is pre-training enabled
-    CONFIG_strParams.bEnablePretraining = 1;
+    CONFIG_strParams.bEnablePretraining = 0;
         if (CONFIG_strParams.bEnablePretraining == 1) 
             % Pre-training (RBM) epochs
             CONFIG_strParams.nPreTrainEpochs = 50;
