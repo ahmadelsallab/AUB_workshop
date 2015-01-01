@@ -119,7 +119,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Number of iterations in backprop in which only upper layer weights
     % are updated
-    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 10;
+    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 50;
     
     % Number of epochs in backprop training the basic net before mapping (re-use) starts 
     CONFIG_strParams.nBPNumEpochsBeforeMapping = 50;
