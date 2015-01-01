@@ -27,7 +27,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams_deep_auto()
     % sigmoid
     % tanh
     global sActivationFunction;
-    sActivationFunction = 'sigmoid';
+    sActivationFunction = 'tanh';
 	
     % Configuration of the input format
     % MATLAB: the input is just an auto-generated matlab function setting
