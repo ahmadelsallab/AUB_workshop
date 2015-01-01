@@ -107,7 +107,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nInitialNumLayers = 3;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [100 100 100];
+    CONFIG_strParams.vInitialLayersWidths = [1000 1000 1000];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,
@@ -119,7 +119,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Number of iterations in backprop in which only upper layer weights
     % are updated
-    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 50;
+    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 10;
     
     % Number of epochs in backprop training the basic net before mapping (re-use) starts 
     CONFIG_strParams.nBPNumEpochsBeforeMapping = 50;
