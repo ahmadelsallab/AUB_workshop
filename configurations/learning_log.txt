@@ -8,25 +8,40 @@ Initializing Layer 3 with RBM: 100-100
 Pre-training RBM
 Initializing done successfuly
 Fine tuning ...
-Before epoch 1 Train # misclassified: 423 (from 800). Test # misclassified: 92 (from 200) 	 	 
+Before epoch 1 Train # misclassified: 420 (from 800). Test # misclassified: 102 (from 200) 	 	 
 Before epoch 2 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 3 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 4 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 5 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 6 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 7 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 8 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 9 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 10 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 11 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 12 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 13 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 14 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 15 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 16 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 17 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 18 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 19 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 20 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 21 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
-Before epoch 22 Train # misclassified: 481 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 3 Train # misclassified: 502 (from 800). Test # misclassified: 101 (from 200) 	 	 
+Before epoch 4 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 5 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 6 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 7 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 8 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 9 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 10 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 11 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 12 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 13 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 14 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 15 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 16 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 17 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 18 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 19 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 20 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 21 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 22 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Before epoch 23 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
+Fine tuning done successfuly
+Update Net
+Classification error of phase 1: 100
+Training sub-net with arch 100 100 100 
+Initializing net...
+Initializing Layer 1 with RBM: 11385-100 
+Pre-training RBM
+Initializing Layer 2 with RBM: 100-100 
+Pre-training RBM
+Initializing Layer 3 with RBM: 100-100 
+Pre-training RBM
+Initializing done successfuly
+Fine tuning ...
+Before epoch 1 Train # misclassified: 319 (from 800). Test # misclassified: 100 (from 200) 	 	 
