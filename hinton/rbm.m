@@ -65,7 +65,8 @@ for epoch = epoch:maxepoch,
   posvisact = sum(data);
 
 %%%%%%%%% END OF POSITIVE PHASE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  poshidstates = poshidprobs > rand(numcases,numhid);
+  %poshidstates = poshidprobs > rand(numcases,numhid);
+  poshidstates = poshidprobs;
 
 %%%%%%%%% START NEGATIVE PHASE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   negdata = 1./(1 + exp(-poshidstates*vishid' - repmat(visbiases,numcases,1)));
