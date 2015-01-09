@@ -89,7 +89,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nMaxFeaturesRange = 1;
     
     % Batch size to use when making batches (training and testing)
-    CONFIG_strParams.nBatchSize = 10;
+    CONFIG_strParams.nBatchSize = 100;
     
     % Is automating labeling enabled
     CONFIG_strParams.bAutoLabel = 0;
