@@ -56,10 +56,12 @@ end
 
 for epoch = epoch:maxepoch,
  fprintf(1,'epoch %d\r',epoch); 
+ fprintf(fid,'epoch %d\r',epoch); 
  errsum=0;
 
  for batch = 1:numbatches,
  fprintf(1,'epoch %d batch %d\r',epoch,batch);
+ fprintf(fid,'epoch %d batch %d\r',epoch,batch);
 
 %%%%%%%%% START POSITIVE PHASE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   data = batchdata(:,:,batch);
@@ -103,5 +105,6 @@ poshidstates = poshidprobs+randn(numcases,numhid);
 
  end
 fprintf(1, 'epoch %4i error %f \n', epoch, errsum);
+fprintf(fid, 'epoch %4i error %f \n', epoch, errsum);
 
 end

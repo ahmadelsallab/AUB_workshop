@@ -52,9 +52,11 @@ end
 
 for epoch = epoch:maxepoch,
  fprintf(1,'epoch %d\r',epoch); 
+ fprintf(fid,'epoch %d\r',epoch); 
  errsum=0;
  for batch = 1:numbatches,
  fprintf(1,'epoch %d batch %d\r',epoch,batch); 
+ fprintf(fid,'epoch %d batch %d\r',epoch,batch); 
 
 %%%%%%%%% START POSITIVE PHASE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   data = batchdata(:,:,batch);
@@ -65,8 +67,7 @@ for epoch = epoch:maxepoch,
   posvisact = sum(data);
 
 %%%%%%%%% END OF POSITIVE PHASE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %poshidstates = poshidprobs > rand(numcases,numhid);
-  poshidstates = poshidprobs;
+  poshidstates = poshidprobs > rand(numcases,numhid);
 
 %%%%%%%%% START NEGATIVE PHASE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   negdata = 1./(1 + exp(-poshidstates*vishid' - repmat(visbiases,numcases,1)));
@@ -99,4 +100,5 @@ for epoch = epoch:maxepoch,
 
   end
   fprintf(1, 'epoch %4i error %6.1f  \n', epoch, errsum); 
+  fprintf(fid, 'epoch %4i error %6.1f  \n', epoch, errsum); 
 end;

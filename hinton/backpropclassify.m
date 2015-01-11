@@ -18,14 +18,23 @@
 % You can also set maxepoch, default value is 200 as in our paper.  
 
 maxepoch=200;
-fprintf(1,'\nTraining discriminative model on MNIST by minimizing cross entropy error. \n');
-fprintf(1,'60 batches of 1000 cases each. \n');
 
 load mnistvhclassify
 load mnisthpclassify
 load mnisthp2classify
-
+fprintf(1,'\nTraining discriminative model on MNIST by minimizing cross entropy error. \n');
+fprintf(1,'60 batches of 1000 cases each. \n');
+fprintf(fid,'\nTraining discriminative model on MNIST by minimizing cross entropy error. \n');
+fprintf(fid,'60 batches of 1000 cases each. \n');
 makebatches;
+[numcases numdims numbatches]=size(batchdata);
+if(reduce_training_set == 1)
+    % Remove 10 batches = 10000 example
+    reduced_numbatches = numbatches - 300;
+    fprintf(1,'Reducing num batches to %d. \n', reduced_numbatches);
+    fprintf(fid,'Reducing num batches to %d. \n', reduced_numbatches);
+    batchdata = batchdata(:, :, 1 : reduced_numbatches);
+end
 [numcases numdims numbatches]=size(batchdata);
 N=numcases; 
 
@@ -100,6 +109,8 @@ end
  test_err(epoch)=(testnumcases*testnumbatches-counter);
  test_crerr(epoch)=err_cr/testnumbatches;
  fprintf(1,'Before epoch %d Train # misclassified: %d (from %d). Test # misclassified: %d (from %d) \t \t \n',...
+            epoch,train_err(epoch),numcases*numbatches,test_err(epoch),testnumcases*testnumbatches);
+ fprintf(fid,'Before epoch %d Train # misclassified: %d (from %d). Test # misclassified: %d (from %d) \t \t \n',...
             epoch,train_err(epoch),numcases*numbatches,test_err(epoch),testnumcases*testnumbatches);
 
 %%%%%%%%%%%%%% END OF COMPUTING TEST MISCLASSIFICATION ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

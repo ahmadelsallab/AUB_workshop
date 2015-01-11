@@ -20,25 +20,39 @@
 clear all
 close all
 
-maxepoch=3; 
+maxepoch=50; 
 numhid=500; numpen=500; numpen2=2000; 
-
+fid = fopen('learning_log.txt','w');
 fprintf(1,'Converting Raw files into Matlab format \n');
+fprintf(fid,'Converting Raw files into Matlab format \n');
 converter; 
 
 fprintf(1,'Pretraining a deep autoencoder. \n');
 fprintf(1,'The Science paper used 50 epochs. This uses %3i \n', maxepoch);
-
+fprintf(fid,'Pretraining a deep autoencoder. \n');
+fprintf(fid,'The Science paper used 50 epochs. This uses %3i \n', maxepoch);
 makebatches;
 [numcases numdims numbatches]=size(batchdata);
+reduce_training_set = 1;
+if(reduce_training_set == 1)
+    % Remove 10 batches = 10000 example
+    reduced_numbatches = numbatches - 300;
+    fprintf(1,'Reducing num batches to %d. \n', reduced_numbatches);
+    fprintf(fid,'Reducing num batches to %d. \n', reduced_numbatches);
+    batchdata = batchdata(:, :, 1 : reduced_numbatches);
+end
+[numcases numdims numbatches]=size(batchdata);
+N=numcases; 
 
 fprintf(1,'Pretraining Layer 1 with RBM: %d-%d \n',numdims,numhid);
+fprintf(fid,'Pretraining Layer 1 with RBM: %d-%d \n',numdims,numhid);
 restart=1;
 rbm;
 hidrecbiases=hidbiases; 
-save mnistvhclassify vishid hidrecbiases visbiases;
+save mnistvhclassify vishid hidrecbiases visbiases fid;
 
 fprintf(1,'\nPretraining Layer 2 with RBM: %d-%d \n',numhid,numpen);
+fprintf(fid,'\nPretraining Layer 2 with RBM: %d-%d \n',numhid,numpen);
 batchdata=batchposhidprobs;
 numhid=numpen;
 restart=1;
@@ -47,12 +61,15 @@ hidpen=vishid; penrecbiases=hidbiases; hidgenbiases=visbiases;
 save mnisthpclassify hidpen penrecbiases hidgenbiases;
 
 fprintf(1,'\nPretraining Layer 3 with RBM: %d-%d \n',numpen,numpen2);
+fprintf(fid,'\nPretraining Layer 3 with RBM: %d-%d \n',numpen,numpen2);
 batchdata=batchposhidprobs;
 numhid=numpen2;
 restart=1;
 rbm;
 hidpen2=vishid; penrecbiases2=hidbiases; hidgenbiases2=visbiases;
 save mnisthp2classify hidpen2 penrecbiases2 hidgenbiases2;
+
+reduce_training_set = 1;
 
 backpropclassify; 
 

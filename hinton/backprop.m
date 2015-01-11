@@ -20,6 +20,8 @@
 maxepoch=200;
 fprintf(1,'\nFine-tuning deep autoencoder by minimizing cross entropy error. \n');
 fprintf(1,'60 batches of 1000 cases each. \n');
+fprintf(fid,'\nFine-tuning deep autoencoder by minimizing cross entropy error. \n');
+fprintf(fid,'60 batches of 1000 cases each. \n');
 
 load mnistvh
 load mnisthp
@@ -80,6 +82,7 @@ N=numcases;
 
 %%%% DISPLAY FIGURE TOP ROW REAL DATA BOTTOM ROW RECONSTRUCTIONS %%%%%%%%%%%%%%%%%%%%%%%%%
 fprintf(1,'Displaying in figure 1: Top row - real data, Bottom row -- reconstructions \n');
+fprintf(fid,'Displaying in figure 1: Top row - real data, Bottom row -- reconstructions \n');
 output=[];
  for ii=1:15
   output = [output data(ii,1:end-1)' dataout(ii,:)'];
@@ -112,13 +115,14 @@ for batch = 1:testnumbatches
   end
  test_err(epoch)=err/testnumbatches;
  fprintf(1,'Before epoch %d Train squared error: %6.3f Test squared error: %6.3f \t \t \n',epoch,train_err(epoch),test_err(epoch));
+ fprintf(fid,'Before epoch %d Train squared error: %6.3f Test squared error: %6.3f \t \t \n',epoch,train_err(epoch),test_err(epoch));
 
 %%%%%%%%%%%%%% END OF COMPUTING TEST RECONSTRUCTION ERROR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  tt=0;
  for batch = 1:numbatches/10
  fprintf(1,'epoch %d batch %d\r',epoch,batch);
-
+ fprintf(fid,'epoch %d batch %d\r',epoch,batch);
 %%%%%%%%%%% COMBINE 10 MINIBATCHES INTO 1 LARGER MINIBATCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  tt=tt+1; 
  data=[];
