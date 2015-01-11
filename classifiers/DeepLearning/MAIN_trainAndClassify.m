@@ -38,7 +38,7 @@ function MAIN_trainAndClassify(CONFIG_strParams)
 	
 	if(CONFIG_strParams.bReduceTrainingSetSizeWithMapping)
 		fprintf(1, 'Reducing training set to %d percent...\n', CONFIG_strParams.nDesiredTrainSetSizePercent);
-        load(CONFIG_strParams.sInputDataWorkspace);
+        load(CONFIG_strParams.sInputDataWorkspace, 'mTestFeatures', 'mTestTargets', 'mTrainFeatures', 'mTrainTargets');
 
 		mTrainFeatures = mTrainFeatures(1 : size(mTrainFeatures, 1) * (CONFIG_strParams.nDesiredTrainSetSizePercent / 100), :);
 		mTrainTargets = mTrainTargets(1 : size(mTrainTargets, 1) * (CONFIG_strParams.nDesiredTrainSetSizePercent / 100), :);
@@ -49,7 +49,7 @@ function MAIN_trainAndClassify(CONFIG_strParams)
 	end	
     if(CONFIG_strParams.nDevSetPercent > 0)
 		fprintf(1, 'Creating development set %d percent of training data...\n', CONFIG_strParams.nDevSetPercent);
-        load(CONFIG_strParams.sInputDataWorkspace);
+        load(CONFIG_strParams.sInputDataWorkspace, 'mTestFeatures', 'mTestTargets', 'mTrainFeatures', 'mTrainTargets');
         
         mDevFeatures = mTrainFeatures(1 : floor(size(mTrainFeatures, 1) * (CONFIG_strParams.nDevSetPercent / 100)), :);
         mDevTargets = mTrainTargets(1 : floor(size(mTrainTargets, 1) * (CONFIG_strParams.nDevSetPercent / 100)), :);
@@ -60,7 +60,13 @@ function MAIN_trainAndClassify(CONFIG_strParams)
 		save(CONFIG_strParams.sInputDataWorkspace, '-v7.3', 'mTestFeatures', 'mTestTargets', 'mTrainFeatures', 'mTrainTargets');
 		
 		fprintf(1, 'Development set created successfuly\n');
+    else
+
         
+        mDevFeatures = [];
+        mDevTargets = [];
+
+
     end
     switch (CONFIG_strParams.sInputFormat)
         case 'MATLAB'
@@ -76,7 +82,7 @@ function MAIN_trainAndClassify(CONFIG_strParams)
 			save(CONFIG_strParams.sInputDataWorkspace, '-struct', 'DPREP_strData', 'mFeatures', 'mTargets');
 
         case 'MatlabWorkspace'
-            load(CONFIG_strParams.sInputDataWorkspace);
+            load(CONFIG_strParams.sInputDataWorkspace, 'mTargets', 'mFeatures');
             DPREP_strData.mTargets = mTargets;
             DPREP_strData.mFeatures = mFeatures;
             if(strcmp(CONFIG_strParams.eFeaturesMode, 'Raw'))
@@ -96,7 +102,7 @@ function MAIN_trainAndClassify(CONFIG_strParams)
             end
             
 		case 'MatlabWorkspaceReadyTestTrainSplit'
-            load(CONFIG_strParams.sInputDataWorkspace);
+            load(CONFIG_strParams.sInputDataWorkspace, 'mTrainFeatures', 'mTrainTargets', 'mTestFeatures', 'mTestTargets');
 			nNumPhases = floor(CONFIG_strParams.nFinalFirstLayerWidth/CONFIG_strParams.vInitialLayersWidths(1));
 			if(CONFIG_strParams.bDoubleTrainingSetSizeWithMapping == 1)							
 				nReducedSize = floor(size(mTrainTargets, 1) / nNumPhases);

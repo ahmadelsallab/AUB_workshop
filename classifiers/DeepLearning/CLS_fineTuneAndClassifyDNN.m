@@ -84,7 +84,7 @@ function [NM_strNetParams, TST_strPerformanceInfo] = CLS_fineTuneAndClassifyDNN(
 
     % Initialize the learning rate
     lrate = 0.1;
-    minrate = 0.0001;
+    minrate = 0.000001;
 
     %%%%%%%%%%%%%%%%%%%%%%%% START FINE TUNING  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     for nEpoch = 1 : CLS_strPrvt.nBPMaxEpoch
@@ -163,10 +163,12 @@ function [NM_strNetParams, TST_strPerformanceInfo] = CLS_fineTuneAndClassifyDNN(
                 if(nErrRatio <= 0.0)
                     % Accept this epoch
                     nPrevDevErr = nDevErr;
+                    %lrate = lrate * 2.0;
                     fprintf(1, 'Epoch accepted, dev error ratio= %d, lrate = %d\n', nErrRatio, lrate);
                 else
                     % Reduce learning rate
                     lrate = lrate / 2.0;
+                    %lrate = lrate / 100.0;
                     % Roll back to old weights
                     NM_strNetParams.cWeights = CLS_strPrvt.cPrevWeights;
                     NM_strNetParams.mClassWeights = CLS_strPrvt.mPrevClassWeights;

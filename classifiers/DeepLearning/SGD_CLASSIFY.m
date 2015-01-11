@@ -48,6 +48,16 @@ IO = (targetout-target(:,1:end));
 Ix_class=IO;
 
 dw_class =  momentum * dw_class_old + lrate * (BP_wprobs{N_layers})' * Ix_class; 
+%dw_class(abs(dw_class) > 10) = 0.1*randn(size(dw_class(abs(dw_class) > 10), 1), size(dw_class(abs(dw_class) > 10), 2));
+%dw_class(isnan(dw_class)) = 0.1*randn(size(dw_class(isnan(dw_class)), 1), size(dw_class(isnan(dw_class)), 2));
+%dw_class(abs(dw_class) > 10) = 1;
+%dw_class(isnan(dw_class)) = 1;
+
+%dw_class(abs(dw_class) > 1) = ones(size(dw_class(abs(dw_class) > 1), 1), size(dw_class(abs(dw_class) > 1), 2));
+%dw_class(isnan(dw_class)) = ones(size(dw_class(isnan(dw_class)), 1), size(dw_class(isnan(dw_class)), 2));
+
+dw_class(abs(dw_class) > 10) = 1000*randn(size(dw_class(abs(dw_class) > 10), 1), size(dw_class(abs(dw_class) > 10), 2));
+dw_class(isnan(dw_class)) = 1000*randn(size(dw_class(isnan(dw_class)), 1), size(dw_class(isnan(dw_class)), 2));
 
 layer = N_layers;
 Ix_upper = Ix_class;
@@ -83,6 +93,19 @@ while (layer >= 1)
         dw{layer} = momentum * dw_old{layer} + lrate * XX'*Ix{layer};
 		
     end
+    %dw{layer}(abs(dw{layer}) > 10) = 0.1*randn(size(dw{layer}(abs(dw{layer}) > 10), 1), size(dw{layer}(abs(dw{layer}) > 10), 2));
+    %dw{layer}(isnan(dw{layer})) = 0.1*randn(size(dw{layer}(isnan(dw{layer})), 1), size(dw{layer}(isnan(dw{layer})), 2));
+    
+    %dw{layer}(abs(dw{layer}) > 10) = 1;    
+    %dw{layer}(isnan(dw{layer})) = 1;
+
+    %dw{layer}(abs(dw{layer}) > 1) = ones(size(dw{layer}(abs(dw{layer}) > 1), 1), size(dw{layer}(abs(dw{layer}) > 1), 2));
+    %dw{layer}(isnan(dw{layer})) = ones(size(dw{layer}(isnan(dw{layer})), 1), size(dw{layer}(isnan(dw{layer})), 2));
+
+    dw{layer}(abs(dw{layer}) > 10) = 1000*randn(size(dw{layer}(abs(dw{layer}) > 10), 1), size(dw{layer}(abs(dw{layer}) > 10), 2));
+    dw{layer}(isnan(dw{layer})) = 1000*randn(size(dw{layer}(isnan(dw{layer})), 1), size(dw{layer}(isnan(dw{layer})), 2));
+
+    
     Ix_upper = [];
 	Ix_upper = Ix{layer};
 	w_upper = [];
