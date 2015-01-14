@@ -1,0 +1,68 @@
+Training sub-net with arch 42 42 42 
+Initializing net...
+Initializing Layer 1 with RBM: 6375-42 
+Pre-training RBM
+Initializing Layer 2 with RBM: 42-42 
+Pre-training RBM
+Initializing Layer 3 with RBM: 42-42 
+Pre-training RBM
+Initializing done successfuly
+Fine tuning ...
+Before epoch 1 Train # misclassified: 60625 (from 101900). Test # misclassified: 16757 (from 27400) 	 	 
+Before epoch 2 Train # misclassified: 60625 (from 101900). Test # misclassified: 16757 (from 27400) 	 	 
+Before epoch 3 Train # misclassified: 41837 (from 101900). Test # misclassified: 12237 (from 27400) 	 	 
+Before epoch 4 Train # misclassified: 32303 (from 101900). Test # misclassified: 9976 (from 27400) 	 	 
+Before epoch 5 Train # misclassified: 29611 (from 101900). Test # misclassified: 9460 (from 27400) 	 	 
+Before epoch 6 Train # misclassified: 28835 (from 101900). Test # misclassified: 9353 (from 27400) 	 	 
+Before epoch 7 Train # misclassified: 25612 (from 101900). Test # misclassified: 8802 (from 27400) 	 	 
+Before epoch 8 Train # misclassified: 31644 (from 101900). Test # misclassified: 10537 (from 27400) 	 	 
+Before epoch 9 Train # misclassified: 25273 (from 101900). Test # misclassified: 8912 (from 27400) 	 	 
+Before epoch 10 Train # misclassified: 25853 (from 101900). Test # misclassified: 9382 (from 27400) 	 	 
+Before epoch 11 Train # misclassified: 25187 (from 101900). Test # misclassified: 8839 (from 27400) 	 	 
+Before epoch 12 Train # misclassified: 26609 (from 101900). Test # misclassified: 9492 (from 27400) 	 	 
+Before epoch 13 Train # misclassified: 24441 (from 101900). Test # misclassified: 9070 (from 27400) 	 	 
+Before epoch 14 Train # misclassified: 22028 (from 101900). Test # misclassified: 8792 (from 27400) 	 	 
+Before epoch 15 Train # misclassified: 22743 (from 101900). Test # misclassified: 8768 (from 27400) 	 	 
+Before epoch 16 Train # misclassified: 21049 (from 101900). Test # misclassified: 8525 (from 27400) 	 	 
+Before epoch 17 Train # misclassified: 24872 (from 101900). Test # misclassified: 9522 (from 27400) 	 	 
+Before epoch 18 Train # misclassified: 23928 (from 101900). Test # misclassified: 9389 (from 27400) 	 	 
+Before epoch 19 Train # misclassified: 18476 (from 101900). Test # misclassified: 8166 (from 27400) 	 	 
+Before epoch 20 Train # misclassified: 20974 (from 101900). Test # misclassified: 8749 (from 27400) 	 	 
+Before epoch 21 Train # misclassified: 22077 (from 101900). Test # misclassified: 9050 (from 27400) 	 	 
+Before epoch 22 Train # misclassified: 18536 (from 101900). Test # misclassified: 8436 (from 27400) 	 	 
+Before epoch 23 Train # misclassified: 18283 (from 101900). Test # misclassified: 8314 (from 27400) 	 	 
+Before epoch 24 Train # misclassified: 18445 (from 101900). Test # misclassified: 8494 (from 27400) 	 	 
+Before epoch 25 Train # misclassified: 17192 (from 101900). Test # misclassified: 8074 (from 27400) 	 	 
+Before epoch 26 Train # misclassified: 18551 (from 101900). Test # misclassified: 8418 (from 27400) 	 	 
+Before epoch 27 Train # misclassified: 16874 (from 101900). Test # misclassified: 8120 (from 27400) 	 	 
+Before epoch 28 Train # misclassified: 18076 (from 101900). Test # misclassified: 8330 (from 27400) 	 	 
+Before epoch 29 Train # misclassified: 21011 (from 101900). Test # misclassified: 9164 (from 27400) 	 	 
+Before epoch 30 Train # misclassified: 17101 (from 101900). Test # misclassified: 8521 (from 27400) 	 	 
+Fine tuning done successfuly
+Update Net
+Classification error of phase 1: 8074
+Training sub-net with arch 84 84 84 
+Initializing net...
+Initializing Layer 1 with RBM: 6375-84 
+Pre-training RBM
+Initializing Layer 2 with RBM: 84-84 
+Pre-training RBM
+Initializing Layer 3 with RBM: 84-84 
+Pre-training RBM
+Initializing done successfuly
+Fine tuning ...
+Before epoch 1 Train # misclassified: 18324 (from 101900). Test # misclassified: 8440 (from 27400) 	 	 
+Before epoch 2 Train # misclassified: 18321 (from 101900). Test # misclassified: 8440 (from 27400) 	 	 
+Before epoch 3 Train # misclassified: 18321 (from 101900). Test # misclassified: 8440 (from 27400) 	 	 
+Before epoch 4 Train # misclassified: 28815 (from 101900). Test # misclassified: 10295 (from 27400) 	 	 
+Before epoch 5 Train # misclassified: 23120 (from 101900). Test # misclassified: 9236 (from 27400) 	 	 
+Before epoch 6 Train # misclassified: 22560 (from 101900). Test # misclassified: 9191 (from 27400) 	 	 
+Before epoch 7 Train # misclassified: 21701 (from 101900). Test # misclassified: 9033 (from 27400) 	 	 
+Before epoch 8 Train # misclassified: 21437 (from 101900). Test # misclassified: 9088 (from 27400) 	 	 
+Before epoch 9 Train # misclassified: 21082 (from 101900). Test # misclassified: 8970 (from 27400) 	 	 
+Before epoch 10 Train # misclassified: 19805 (from 101900). Test # misclassified: 8624 (from 27400) 	 	 
+Before epoch 11 Train # misclassified: 22050 (from 101900). Test # misclassified: 9087 (from 27400) 	 	 
+Before epoch 12 Train # misclassified: 18588 (from 101900). Test # misclassified: 8500 (from 27400) 	 	 
+Before epoch 13 Train # misclassified: 21818 (from 101900). Test # misclassified: 9219 (from 27400) 	 	 
+Before epoch 14 Train # misclassified: 19631 (from 101900). Test # misclassified: 8878 (from 27400) 	 	 
+Before epoch 15 Train # misclassified: 23002 (from 101900). Test # misclassified: 9277 (from 27400) 	 	 

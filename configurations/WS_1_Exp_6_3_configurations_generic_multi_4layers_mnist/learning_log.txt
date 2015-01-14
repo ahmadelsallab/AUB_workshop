@@ -1,0 +1,56 @@
+Training sub-net with arch 500 500 500 2000 
+Initializing net...
+Initializing Layer 1 with RBM: 784-500 
+Pre-training RBM
+Initializing Layer 2 with RBM: 500-500 
+Pre-training RBM
+Initializing Layer 3 with RBM: 500-500 
+Pre-training RBM
+Initializing Layer 4 with RBM: 500-2000 
+Pre-training RBM
+Initializing done successfuly
+Fine tuning ...
+Before epoch 1 Train # misclassified: 57418 (from 60000). Test # misclassified: 9609 (from 10000) 	 	 
+Before epoch 2 Train # misclassified: 2066 (from 60000). Test # misclassified: 341 (from 10000) 	 	 
+Before epoch 3 Train # misclassified: 1043 (from 60000). Test # misclassified: 230 (from 10000) 	 	 
+Before epoch 4 Train # misclassified: 456 (from 60000). Test # misclassified: 167 (from 10000) 	 	 
+Before epoch 5 Train # misclassified: 431 (from 60000). Test # misclassified: 172 (from 10000) 	 	 
+Before epoch 6 Train # misclassified: 195 (from 60000). Test # misclassified: 138 (from 10000) 	 	 
+Before epoch 7 Train # misclassified: 102 (from 60000). Test # misclassified: 132 (from 10000) 	 	 
+Before epoch 8 Train # misclassified: 48 (from 60000). Test # misclassified: 126 (from 10000) 	 	 
+Before epoch 9 Train # misclassified: 19 (from 60000). Test # misclassified: 115 (from 10000) 	 	 
+Before epoch 10 Train # misclassified: 10 (from 60000). Test # misclassified: 114 (from 10000) 	 	 
+Before epoch 11 Train # misclassified: 6 (from 60000). Test # misclassified: 121 (from 10000) 	 	 
+Before epoch 12 Train # misclassified: 2 (from 60000). Test # misclassified: 117 (from 10000) 	 	 
+Before epoch 13 Train # misclassified: 2 (from 60000). Test # misclassified: 111 (from 10000) 	 	 
+Before epoch 14 Train # misclassified: 0 (from 60000). Test # misclassified: 114 (from 10000) 	 	 
+Before epoch 15 Train # misclassified: 0 (from 60000). Test # misclassified: 114 (from 10000) 	 	 
+Before epoch 16 Train # misclassified: 0 (from 60000). Test # misclassified: 109 (from 10000) 	 	 
+Before epoch 17 Train # misclassified: 0 (from 60000). Test # misclassified: 108 (from 10000) 	 	 
+Before epoch 18 Train # misclassified: 0 (from 60000). Test # misclassified: 110 (from 10000) 	 	 
+Before epoch 19 Train # misclassified: 0 (from 60000). Test # misclassified: 109 (from 10000) 	 	 
+Before epoch 20 Train # misclassified: 0 (from 60000). Test # misclassified: 111 (from 10000) 	 	 
+Before epoch 21 Train # misclassified: 0 (from 60000). Test # misclassified: 111 (from 10000) 	 	 
+Before epoch 22 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 23 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 24 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 25 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 26 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 27 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 28 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 29 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 30 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 31 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 32 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 33 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 34 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 35 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 36 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 37 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 38 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 39 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 40 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 41 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 42 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 43 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 
+Before epoch 44 Train # misclassified: 0 (from 60000). Test # misclassified: 113 (from 10000) 	 	 

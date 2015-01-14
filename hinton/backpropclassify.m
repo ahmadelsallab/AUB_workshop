@@ -30,7 +30,7 @@ makebatches;
 [numcases numdims numbatches]=size(batchdata);
 if(reduce_training_set == 1)
     % Remove 10 batches = 10000 example
-    reduced_numbatches = numbatches - 300;
+    reduced_numbatches = numbatches - 550;
     fprintf(1,'Reducing num batches to %d. \n', reduced_numbatches);
     fprintf(fid,'Reducing num batches to %d. \n', reduced_numbatches);
     batchdata = batchdata(:, :, 1 : reduced_numbatches);

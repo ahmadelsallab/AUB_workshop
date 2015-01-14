@@ -1,0 +1,20 @@
+Training sub-net with arch 42 42 42 
+Initializing net...
+Initializing Layer 1 with RBM: 363535-42 
+Pre-training RBM
+Initializing Layer 2 with RBM: 42-42 
+Pre-training RBM
+Initializing Layer 3 with RBM: 42-42 
+Pre-training RBM
+Initializing done successfuly
+Fine tuning ...
+Before epoch 1 Train # misclassified: 100278 (from 101900). Test # misclassified: 26958 (from 27400) 	 	 
+Before epoch 2 Train # misclassified: 60625 (from 101900). Test # misclassified: 16757 (from 27400) 	 	 
+Before epoch 3 Train # misclassified: 35148 (from 101900). Test # misclassified: 19624 (from 27400) 	 	 
+Before epoch 4 Train # misclassified: 26245 (from 101900). Test # misclassified: 21014 (from 27400) 	 	 
+Before epoch 5 Train # misclassified: 20740 (from 101900). Test # misclassified: 21253 (from 27400) 	 	 
+Before epoch 6 Train # misclassified: 10984 (from 101900). Test # misclassified: 20709 (from 27400) 	 	 
+Before epoch 7 Train # misclassified: 8592 (from 101900). Test # misclassified: 20980 (from 27400) 	 	 
+Before epoch 8 Train # misclassified: 5899 (from 101900). Test # misclassified: 20638 (from 27400) 	 	 
+Before epoch 9 Train # misclassified: 5161 (from 101900). Test # misclassified: 20743 (from 27400) 	 	 
+Before epoch 10 Train # misclassified: 3766 (from 101900). Test # misclassified: 20719 (from 27400) 	 	 

@@ -1,0 +1,4 @@
+Training sub-net with arch 500 2000 
+Initializing net...
+Initializing Layer 1 with RBM: 784-500 
+Pre-training RBM

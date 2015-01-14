@@ -20,7 +20,7 @@
 clear all
 close all
 
-maxepoch=50; 
+maxepoch=0; 
 numhid=500; numpen=500; numpen2=2000; 
 fid = fopen('learning_log.txt','w');
 fprintf(1,'Converting Raw files into Matlab format \n');
@@ -35,8 +35,7 @@ makebatches;
 [numcases numdims numbatches]=size(batchdata);
 reduce_training_set = 1;
 if(reduce_training_set == 1)
-    % Remove 10 batches = 10000 example
-    reduced_numbatches = numbatches - 300;
+    reduced_numbatches = numbatches - 550;
     fprintf(1,'Reducing num batches to %d. \n', reduced_numbatches);
     fprintf(fid,'Reducing num batches to %d. \n', reduced_numbatches);
     batchdata = batchdata(:, :, 1 : reduced_numbatches);
@@ -69,7 +68,7 @@ rbm;
 hidpen2=vishid; penrecbiases2=hidbiases; hidgenbiases2=visbiases;
 save mnisthp2classify hidpen2 penrecbiases2 hidgenbiases2;
 
-reduce_training_set = 1;
+reduce_training_set = 0;
 
 backpropclassify; 
 

@@ -113,6 +113,7 @@ function MAIN_trainAndClassify(CONFIG_strParams)
 				fprintf(1, 'Reduction done successfuly\n');
 			end
             if(strcmp(CONFIG_strParams.eFeaturesMode, 'Raw'))
+                load(CONFIG_strParams.sInputDataWorkspace, 'nBitfieldLength', 'vChunkLength', 'vOffset');
                 DPREP_strData.nBitfieldLength = nBitfieldLength;
                 DPREP_strData.vChunkLength = vChunkLength;
                 DPREP_strData.vOffset = vOffset;
